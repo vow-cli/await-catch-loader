@@ -97,3 +97,7 @@ module.exports = {
 ```
 
 注意该`loader`的执行时机要位于`babel-loader`之前，因为`babel-loader`会将`async/await`做二次转译
+
+### 后续
+
+对`await`做更加精细化的处理，目前所有包含`await`的代码都会自动加上处理函数，比较暴力;可以创建一个新的语法叫做`tcAwait`
