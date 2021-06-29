@@ -1,21 +1,23 @@
 {
-  "name": "async-catch-loader",
+  "name": "@vow-cli/await-catch-loader",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a webpack loader that automatic captures error of async function",
+  "main": "src/index.js",
   "scripts": {
     "test": "npx webpack"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["webpack-loader","captures error"],
+  "author": "genfa.zeng",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/generator": "^7.14.5",
     "@babel/parser": "^7.14.7",
     "@babel/traverse": "^7.14.7",
     "@babel/types": "^7.14.5",
     "eslint": "^7.29.0",
-    "jest": "^27.0.6",
     "loader-utils": "^2.0.0",
     "memory-fs": "^0.5.0",
     "webpack": "^4.44.1",
