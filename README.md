@@ -52,7 +52,7 @@ const [error, data] = await tc(
 );
 ```
 
-但是如果每次在写代码时，都要去引用`tc`函数并且给`await`后的表达式包裹进去，也是十分繁琐的，于是就写了这样的一个`webpack-loader`自动实现该过程。
+但是如果每次在写代码时，都要去引用`tc`函数并且将`await`后的表达式包裹进去，也是十分繁琐的，于是就写了这样的一个`webpack-loader`自动实现该过程。
 
 ## 原理
 
@@ -66,6 +66,8 @@ npm install @vow-cli/await-catch-loader -D`
 
 ## 使用
 
+`webpack` 中
+
 ```javascript
 //webpack.config.js
 module: {
@@ -77,6 +79,20 @@ module: {
       },
     },
   ];
+}
+```
+
+在 `vue-cli` 创建的项目中:
+
+```javascript
+//vue.config.js
+module.exports = {
+   config.module
+      .rule("js")
+      .test(/\.js$/)
+      .use("@vow-cli/await-catch-loader")
+      .loader("@vow-cli/await-catch-loader")
+      .end();
 }
 ```
 
