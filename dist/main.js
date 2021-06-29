@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./test/example.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./test/example.js":
+/*!*************************!*\
+  !*** ./test/example.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("/*\r\n * @Author: genfa.zeng\r\n * @Date: 2021-06-28 22:51:19\r\n * @Description:\r\n */\r\nasync function asyncTestFun() {\r\n  const res = await Promise.resolve(\"success\");\r\n  console.log(res);\r\n}\r\n\r\nasyncTestFun();\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("function tc010922a6(promise) {\n  return promise.then(data => [null, data]).catch(error => [error, null]);\n}\n\nasync function asyncTestFun() {\n  const [error1, data1] = await tc010922a6(Promise.resolve(\"success\"));\n  const [error2, data2] = await tc010922a6(Promise.reject(\"error\"));\n  console.log(error1, data1);\n  console.log(error2, data2);\n}\n\nasyncTestFun();\n\n//# sourceURL=webpack:///./test/example.js?");
 
 /***/ })
 
